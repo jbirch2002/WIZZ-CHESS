@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://gtgpbxw5o0n7"]
+
+[ext_resource type="Texture2D" uid="uid://nl2ml1ydo6er" path="res://TransSpritesBetterBLK/Sprites/blk_king.png" id="1_j1u8u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ounhg"]
+transparency = 1
+albedo_texture = ExtResource("1_j1u8u")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_gc1py"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0oam2"]
+
+[node name="BLKKingStartingP" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_ounhg")
+mesh = SubResource("QuadMesh_gc1py")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("BoxShape3D_0oam2")

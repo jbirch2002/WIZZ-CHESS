@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk1qb45f26e3r"]
+
+[ext_resource type="Texture2D" uid="uid://cstvs78vw5sk0" path="res://TransSpritesBetterBLK/Sprites/blk_knight.png" id="1_fwrec"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ev6xq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlpw8"]
+transparency = 1
+albedo_texture = ExtResource("1_fwrec")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_n4uy5"]
+
+[node name="BLKKnightStartingP" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("BoxShape3D_ev6xq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_mlpw8")
+mesh = SubResource("QuadMesh_n4uy5")

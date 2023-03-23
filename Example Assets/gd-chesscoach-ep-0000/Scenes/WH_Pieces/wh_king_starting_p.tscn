@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://duiscob5mxi2p"]
+
+[ext_resource type="Texture2D" uid="uid://b64uadleeussl" path="res://TransSpritesBetterWhite/Sprites/king_white.png" id="1_1e487"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k3cxs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvg0a"]
+transparency = 1
+albedo_texture = ExtResource("1_1e487")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_d0nei"]
+
+[node name="WHKingStartingP" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("BoxShape3D_k3cxs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_dvg0a")
+mesh = SubResource("QuadMesh_d0nei")
+skeleton = NodePath("../CollisionShape3D")

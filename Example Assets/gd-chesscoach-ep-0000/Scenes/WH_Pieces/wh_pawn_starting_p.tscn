@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://oox2jon2gavn"]
+
+[ext_resource type="Texture2D" uid="uid://dqq172gvjytd" path="res://TransSpritesBetterWhite/Sprites/pawn_white.png" id="1_a2ejo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3x5n5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lt1lp"]
+transparency = 1
+albedo_texture = ExtResource("1_a2ejo")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_wawfw"]
+
+[node name="WHPawnStartingP" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("BoxShape3D_3x5n5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_lt1lp")
+mesh = SubResource("QuadMesh_wawfw")
+skeleton = NodePath("../CollisionShape3D")

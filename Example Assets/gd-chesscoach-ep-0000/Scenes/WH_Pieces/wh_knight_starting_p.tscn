@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://de5wtkoknxbbh"]
+
+[ext_resource type="Texture2D" uid="uid://b26bav6r3si7x" path="res://TransSpritesBetterWhite/Sprites/knight_white.png" id="1_fbad7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yqce"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eo058"]
+transparency = 1
+albedo_texture = ExtResource("1_fbad7")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_vjbpq"]
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("BoxShape3D_4yqce")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_eo058")
+mesh = SubResource("QuadMesh_vjbpq")
