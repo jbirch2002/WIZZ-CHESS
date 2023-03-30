@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xfx6sabya1ih"
-path.s3tc="res://.godot/imported/blk_pawn.png-c51dee0887ab1ba9f4e3af6daf0c47e0.s3tc.ctex"
+uid="uid://b26bav6r3si7x"
+path.s3tc="res://.godot/imported/knight_white.png-947fb83dab8c7430415371139e0cf684.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://TransSpritesBetterBLK/Sprites/blk_pawn.png"
-dest_files=["res://.godot/imported/blk_pawn.png-c51dee0887ab1ba9f4e3af6daf0c47e0.s3tc.ctex"]
+source_file="res://sprites/TransSpritesBetterWhite/Sprites/knight_white.png"
+dest_files=["res://.godot/imported/knight_white.png-947fb83dab8c7430415371139e0cf684.s3tc.ctex"]
 
 [params]
 

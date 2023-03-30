@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1u383k686fhp"]
+
+[ext_resource type="Script" path="res://Wizz_Chess_Main_Menu.gd" id="1_olc7f"]
+
+[sub_resource type="SystemFont" id="SystemFont_onj1s"]
+font_names = PackedStringArray("", "Palatino")
+font_italic = true
+hinting = 2
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_sliku"]
+
+[node name="Wizz_Chess_Main_Menu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_olc7f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+color = Color(1, 0.458824, 0.411765, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_onj1s")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxLine_sliku")
+text = "Wizz Chess"
+horizontal_alignment = 3
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "> Play"
+
+[node name="OptionMenu" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
+layout_mode = 2
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "Settings"
+
+[node name="OptionMenu" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer/Selector"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2"]
+layout_mode = 2
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = " Quit"
+
+[node name="OptionMenu" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/Selector"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx7oj7vj7lit1"
-path.s3tc="res://.godot/imported/blk_bishop.png-b6cd4fbf16f3eb073b1c1330a0ef21bc.s3tc.ctex"
+uid="uid://bf4jigbyq5drd"
+path.s3tc="res://.godot/imported/blk_queen.png-d4c8827e1c709b7656a91c1632991aa2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://TransSpritesBetterBLK/Sprites/blk_bishop.png"
-dest_files=["res://.godot/imported/blk_bishop.png-b6cd4fbf16f3eb073b1c1330a0ef21bc.s3tc.ctex"]
+source_file="res://sprites/TransSpritesBetterBLK/Sprites/blk_queen.png"
+dest_files=["res://.godot/imported/blk_queen.png-d4c8827e1c709b7656a91c1632991aa2.s3tc.ctex"]
 
 [params]
 

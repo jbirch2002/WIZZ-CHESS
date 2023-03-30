@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://gtgpbxw5o0n7"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://nl2ml1ydo6er" path="res://TransSpritesBetterBLK/Sprites/blk_king.png" id="1_j1u8u"]
+[ext_resource type="Texture2D" uid="uid://nl2ml1ydo6er" path="res://sprites/TransSpritesBetterBLK/Sprites/blk_king.png" id="1_j1u8u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ounhg"]
 transparency = 1

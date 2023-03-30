@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cstvs78vw5sk0"
-path.s3tc="res://.godot/imported/blk_knight.png-c11069d18b1b2f99463c7b9a33056afa.s3tc.ctex"
+uid="uid://b64uadleeussl"
+path.s3tc="res://.godot/imported/king_white.png-f8d8f6c0753e9e4afde500e9590849d6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://TransSpritesBetterBLK/Sprites/blk_knight.png"
-dest_files=["res://.godot/imported/blk_knight.png-c11069d18b1b2f99463c7b9a33056afa.s3tc.ctex"]
+source_file="res://sprites/TransSpritesBetterWhite/Sprites/king_white.png"
+dest_files=["res://.godot/imported/king_white.png-f8d8f6c0753e9e4afde500e9590849d6.s3tc.ctex"]
 
 [params]
 

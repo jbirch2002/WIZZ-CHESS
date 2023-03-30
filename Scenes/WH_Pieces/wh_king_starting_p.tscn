@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://duiscob5mxi2p"]
+[gd_scene load_steps=5 format=3 uid="uid://cirpqjk5kre8w"]
 
-[ext_resource type="Texture2D" uid="uid://b64uadleeussl" path="res://TransSpritesBetterWhite/Sprites/king_white.png" id="1_1e487"]
+[ext_resource type="Texture2D" uid="uid://b64uadleeussl" path="res://sprites/TransSpritesBetterWhite/Sprites/king_white.png" id="1_7umi8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k3cxs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvg0a"]
 transparency = 1
-albedo_texture = ExtResource("1_1e487")
+albedo_texture = ExtResource("1_7umi8")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_d0nei"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://bliplk78wdkke"]
 
-[ext_resource type="Texture2D" uid="uid://cbt5q8f0u6qi3" path="res://TransSpritesBetterWhite/Sprites/queen_white.png" id="1_wy0s8"]
+[ext_resource type="Texture2D" uid="uid://cbt5q8f0u6qi3" path="res://sprites/TransSpritesBetterWhite/Sprites/queen_white.png" id="1_j4gct"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xjutp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut0t7"]
 transparency = 1
-albedo_texture = ExtResource("1_wy0s8")
+albedo_texture = ExtResource("1_j4gct")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_0pp60"]

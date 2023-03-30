@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://ryiyxqbnmqr1"]
 
-[ext_resource type="Texture2D" uid="uid://j1xchruj3nra" path="res://TransSpritesBetterWhite/Sprites/rook_white.png" id="1_1wk81"]
+[ext_resource type="Texture2D" uid="uid://j1xchruj3nra" path="res://sprites/TransSpritesBetterWhite/Sprites/rook_white.png" id="1_apcva"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hu6gq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ha7xg"]
 transparency = 1
-albedo_texture = ExtResource("1_1wk81")
+albedo_texture = ExtResource("1_apcva")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_kfpkd"]

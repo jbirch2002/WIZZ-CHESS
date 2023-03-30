@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxwlmox03imb3"]
+[gd_scene load_steps=6 format=3 uid="uid://dtmlfktrj8yyi"]
 
-[ext_resource type="Texture2D" uid="uid://b3oqed36a5hti" path="res://TransSpritesBetterBLK/Sprites/blk_rook.png" id="1_o031k"]
+[ext_resource type="Texture2D" uid="uid://b3oqed36a5hti" path="res://sprites/TransSpritesBetterBLK/Sprites/blk_rook.png" id="1_4e4t1"]
 [ext_resource type="Script" path="res://BillboardingScript.gd" id="2_otuno"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wxuso"]
@@ -9,7 +9,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_na85b"]
 transparency = 1
-albedo_texture = ExtResource("1_o031k")
+albedo_texture = ExtResource("1_4e4t1")
 billboard_mode = 1
 
 [node name="BLKRookStartingP" type="StaticBody3D"]

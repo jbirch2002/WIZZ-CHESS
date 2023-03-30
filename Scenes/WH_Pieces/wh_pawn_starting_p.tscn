@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://oox2jon2gavn"]
+[gd_scene load_steps=5 format=3 uid="uid://bcdliax7x5ujx"]
 
-[ext_resource type="Texture2D" uid="uid://dqq172gvjytd" path="res://TransSpritesBetterWhite/Sprites/pawn_white.png" id="1_a2ejo"]
+[ext_resource type="Texture2D" uid="uid://dqq172gvjytd" path="res://sprites/TransSpritesBetterWhite/Sprites/pawn_white.png" id="1_oq5ac"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3x5n5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lt1lp"]
 transparency = 1
-albedo_texture = ExtResource("1_a2ejo")
+albedo_texture = ExtResource("1_oq5ac")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_wawfw"]

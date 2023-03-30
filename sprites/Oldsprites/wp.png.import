@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3oqed36a5hti"
-path.s3tc="res://.godot/imported/blk_rook.png-2f9159d18d24e41cfcf0e1cc4a16eb47.s3tc.ctex"
+uid="uid://clodo48syi8i"
+path.s3tc="res://.godot/imported/wp.png-f47bd6b1d15dad75c2bc0b3f1231064a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://TransSpritesBetterBLK/Sprites/blk_rook.png"
-dest_files=["res://.godot/imported/blk_rook.png-2f9159d18d24e41cfcf0e1cc4a16eb47.s3tc.ctex"]
+source_file="res://sprites/Oldsprites/wp.png"
+dest_files=["res://.godot/imported/wp.png-f47bd6b1d15dad75c2bc0b3f1231064a.s3tc.ctex"]
 
 [params]
 

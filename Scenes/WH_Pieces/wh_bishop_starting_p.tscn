@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dymm460kyc2vv"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://bytgn45htn5ny" path="res://TransSpritesBetterWhite/Sprites/bishop_white.png" id="1_spfv2"]
+[ext_resource type="Texture2D" uid="uid://bytgn45htn5ny" path="res://sprites/TransSpritesBetterWhite/Sprites/bishop_white.png" id="1_spfv2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_86c4k"]
 

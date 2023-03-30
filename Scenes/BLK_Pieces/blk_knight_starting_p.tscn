@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bk1qb45f26e3r"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cstvs78vw5sk0" path="res://TransSpritesBetterBLK/Sprites/blk_knight.png" id="1_fwrec"]
+[ext_resource type="Texture2D" uid="uid://cstvs78vw5sk0" path="res://sprites/TransSpritesBetterBLK/Sprites/blk_knight.png" id="1_fwrec"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ev6xq"]
 

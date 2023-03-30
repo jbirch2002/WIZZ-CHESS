@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnwekj4hee8ha"]
+[gd_scene load_steps=5 format=3 uid="uid://dby1re8uwfr36"]
 
-[ext_resource type="Texture2D" uid="uid://bx7oj7vj7lit1" path="res://TransSpritesBetterBLK/Sprites/blk_bishop.png" id="1_7mqv2"]
+[ext_resource type="Texture2D" uid="uid://bx7oj7vj7lit1" path="res://sprites/TransSpritesBetterBLK/Sprites/blk_bishop.png" id="1_gcktc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pjnxb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tb0m"]
 transparency = 1
-albedo_texture = ExtResource("1_7mqv2")
+albedo_texture = ExtResource("1_gcktc")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_yruni"]

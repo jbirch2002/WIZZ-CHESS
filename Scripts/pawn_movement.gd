@@ -1,60 +1,55 @@
-extends StaticBody3D
+extends "res://Scripts/pieces.gd"
 
-enum PieceColor { WHITE, BLACK }
+enum Sigil {
+	NONE,
+	CATTY_CORNER,
+	SELF_DESTRUCT
+}
 
-export(PieceColor) var color = PieceColor.WHITE
-var initial_move = true
-var board_size = 8
-var move_distance = 1.0
-var is_selected = false
+var sigil = Sigil.NONE
 
-func _ready():
-	add_to_group("ChessPiece")
+func set_sigil(value):
+	sigil = value
 
-func raise_to_top():
-	translation.y += 0.5
-	is_selected = true
+func get_valid_moves(chess_board, board_position, color):
+	var valid_moves = []
+	var current_rank = int(board_position.x) # cast to int
+	var current_row = int(board_position.y)
+	var next_row
 
-func drop():
-	translation.y -= 0.5
-	is_selected = false
+	if sigil == Sigil.CATTY_CORNER:
+		# Move diagonally
+		for direction in [-1, 1]:
+			var next_rank = current_rank + direction
+			if color == Player.WHITE:
+				next_row = current_row + 1
+			else:
+				next_row = current_row - 1
 
-func get_moves():
-	var moves = []
-	var current_position = get_position_on_board()
+			if (next_rank >= int("a")) and (next_rank <= int("h")) and (next_row >= 1) and (next_row <= 8):
+				var target_position = char(next_rank) + str(next_row)
+				if chess_board[target_position] == "":
+					valid_moves.append(target_position)
 
-	if color == PieceColor.WHITE:
-		moves.append(current_position + Vector3(0, 0, -1))
-		if initial_move:
-			moves.append(current_position + Vector3(0, 0, -2))
-	elif color == PieceColor.BLACK:
-		moves.append(current_position + Vector3(0, 0, 1))
-		if initial_move:
-			moves.append(current_position + Vector3(0, 0, 2))
+		# Capture forwards
+		if color == Player.WHITE:
+			next_row = current_row + 1
+		else:
+			next_row = current_row - 1
 
-	return moves
+		for direction in [-1, 1]:
+			var next_rank = current_rank + direction
+			if (next_rank >= int("a")) and (next_rank <= int("h")) and (next_row >= 1) and (next_row <= 8):
+				var target_position = char(next_rank) + str(next_row)
+				if chess_board[target_position] != "" and chess_board[target_position].is_upper() != (color == Player.WHITE):
+					valid_moves.append(target_position)
+					
+	elif sigil == Sigil.SELF_DESTRUCT:
+		# Implement self-destruct sigil logic here
+		pass
 
-func get_position_on_board():
-	return Vector3(
-		int(translation.x / move_distance),
-		0,
-		int(translation.z / move_distance)
-	)
+	else:
+ # Implement regular pawn movement rules here
+		pass
 
-func set_position_on_board(position: Vector3):
-	translation = Vector3(
-		position.x * move_distance,
-		translation.y,
-		position.z * move_distance
-	)
-
-func is_move_valid(target_position: Vector3):
-	var moves = get_moves()
-	return target_position in moves
-
-func try_move(target_position: Vector3):
-	if is_move_valid(target_position):
-		initial_move = false
-		set_position_on_board(target_position)
-		return true
-	return false
+	return valid_moves

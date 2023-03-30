@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b26bav6r3si7x"
-path.s3tc="res://.godot/imported/knight_white.png-6a29e1d436e166dabc270661270cde40.s3tc.ctex"
+uid="uid://b3oqed36a5hti"
+path.s3tc="res://.godot/imported/blk_rook.png-cea483bd02c5bdd9273d11037a113bba.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://TransSpritesBetterWhite/Sprites/knight_white.png"
-dest_files=["res://.godot/imported/knight_white.png-6a29e1d436e166dabc270661270cde40.s3tc.ctex"]
+source_file="res://sprites/TransSpritesBetterBLK/Sprites/blk_rook.png"
+dest_files=["res://.godot/imported/blk_rook.png-cea483bd02c5bdd9273d11037a113bba.s3tc.ctex"]
 
 [params]
 

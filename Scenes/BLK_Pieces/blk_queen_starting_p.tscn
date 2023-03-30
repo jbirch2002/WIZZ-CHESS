@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3gykocsq6rmw"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://bf4jigbyq5drd" path="res://TransSpritesBetterBLK/Sprites/blk_queen.png" id="1_kp4cq"]
+[ext_resource type="Texture2D" uid="uid://bf4jigbyq5drd" path="res://sprites/TransSpritesBetterBLK/Sprites/blk_queen.png" id="1_kp4cq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3k16k"]
 
