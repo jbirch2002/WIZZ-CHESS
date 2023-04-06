@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvg2hx61q1tn4"]
+
+[ext_resource type="Script" path="res://camera_transition.gd" id="1_0qm78"]
+
+[node name="Marker3D" type="Marker3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 7.41488, -5)
+script = ExtResource("1_0qm78")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0.18487, -1.51653, -1.5847)
+current = true
+fov = 78.2
+near = 0.045
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29075, -1.50061, -1.2204)

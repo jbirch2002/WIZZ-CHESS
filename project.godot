@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 CameraTransitions="*res://Autoload/CameraTransitions.tscn"
+Pieces="*res://Scripts/pieces.gd"
 
 [display]
 

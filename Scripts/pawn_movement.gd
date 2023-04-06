@@ -1,55 +1,48 @@
-extends "res://Scripts/pieces.gd"
+extends StaticBody3D
 
-enum Sigil {
-	NONE,
-	CATTY_CORNER,
-	SELF_DESTRUCT
-}
-
-var sigil = Sigil.NONE
+var sigil = Pieces.Sigil.NONE
 
 func set_sigil(value):
 	sigil = value
 
-func get_valid_moves(chess_board, board_position, color):
+func get_valid_moves(chess_board, board_position, color, has_moved):
 	var valid_moves = []
-	var current_rank = int(board_position.x) # cast to int
-	var current_row = int(board_position.y)
-	var next_row
+	var current_position = Pieces.string_to_vector3(board_position)
 
-	if sigil == Sigil.CATTY_CORNER:
-		# Move diagonally
-		for direction in [-1, 1]:
-			var next_rank = current_rank + direction
-			if color == Player.WHITE:
-				next_row = current_row + 1
-			else:
-				next_row = current_row - 1
+	if sigil == Pieces.Sigil.CATTY_CORNER:
+		for diagonal_offset in [-1, 1]:
+			var diagonal_position = current_position + Vector3(diagonal_offset, 0, 1 if color == Pieces.Player.WHITE else -1)
+			var target_position = Pieces.vector3_to_string(diagonal_position)
 
-			if (next_rank >= int("a")) and (next_rank <= int("h")) and (next_row >= 1) and (next_row <= 8):
-				var target_position = char(next_rank) + str(next_row)
-				if chess_board[target_position] == "":
-					valid_moves.append(target_position)
+			if Pieces.is_valid_position(diagonal_position) and chess_board[target_position]["type"] == "":
+				valid_moves.append(target_position)
 
-		# Capture forwards
-		if color == Player.WHITE:
-			next_row = current_row + 1
+			var forward_position = current_position + Vector3(diagonal_offset, 0, 2 if color == Pieces.Player.WHITE else -2)
+			target_position = Pieces.vector3_to_string(forward_position)
+
+			if Pieces.is_valid_position(forward_position) and chess_board[target_position]["type"] != "" and chess_board[target_position]["type"].is_upper() != (color == Pieces.Player.WHITE):
+				valid_moves.append(target_position)
+
+	elif sigil == Pieces.Sigil.SELF_DESTRUCT:
+		var forward_position
+		var double_forward_position
+
+		if color == Pieces.Player.WHITE:
+			forward_position = current_position + Vector3(0, 0, -1)
+			double_forward_position = current_position + Vector3(0, 0, -2)
 		else:
-			next_row = current_row - 1
+			forward_position = current_position + Vector3(0, 0, 1)
+			double_forward_position = current_position + Vector3(0, 0, 2)
 
-		for direction in [-1, 1]:
-			var next_rank = current_rank + direction
-			if (next_rank >= int("a")) and (next_rank <= int("h")) and (next_row >= 1) and (next_row <= 8):
-				var target_position = char(next_rank) + str(next_row)
-				if chess_board[target_position] != "" and chess_board[target_position].is_upper() != (color == Player.WHITE):
-					valid_moves.append(target_position)
-					
-	elif sigil == Sigil.SELF_DESTRUCT:
-		# Implement self-destruct sigil logic here
-		pass
+		if Pieces.is_valid_position(forward_position) and chess_board[Pieces.vector3_to_string(forward_position)]["type"] == "":
+			valid_moves.append(Pieces.vector3_to_string(forward_position))
+
+		if not has_moved and Pieces.is_valid_position(double_forward_position) and chess_board[Pieces.vector3_to_string(double_forward_position)]["type"] == "" and chess_board[Pieces.vector3_to_string(forward_position)]["type"] == "":
+			valid_moves.append(Pieces.vector3_to_string(double_forward_position))
+	
 
 	else:
- # Implement regular pawn movement rules here
+		# Implement regular pawn movement rules here
 		pass
 
 	return valid_moves

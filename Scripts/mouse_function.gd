@@ -1,4 +1,4 @@
-extends Node3D
+extends "res://Scripts/pieces.gd"
 
 class_name mouse_function
 
@@ -18,7 +18,7 @@ func _input(event):
 
 		var result = space_state.intersect_ray(query_parameters)
 
-		if result and "ChessPiece" in result.collider.get_groups():
+		if result and Piece in result.collider.get_groups():
 			select_piece(result.collider, result.position)
 		elif selected_piece:
 			drop_piece()

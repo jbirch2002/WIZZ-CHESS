@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://csxui8wnr6lnl"]
+[gd_scene load_steps=17 format=3 uid="uid://bo7dphjrc7o8b"]
 
 [ext_resource type="PackedScene" uid="uid://dtmlfktrj8yyi" path="res://Scenes/BLK_Pieces/blk_rook_starting_p.tscn" id="1_2y102"]
+[ext_resource type="PackedScene" uid="uid://ddpv753cwgsco" path="res://Scenes/SigilSelection.tscn" id="1_jm8bm"]
 [ext_resource type="PackedScene" uid="uid://biu2fsoyh36p6" path="res://Scenes/Board/white_square.tscn" id="4_sa7kb"]
 [ext_resource type="PackedScene" uid="uid://dobav8yd4t71t" path="res://Scenes/Board/black_square.tscn" id="5_gx3hk"]
 [ext_resource type="PackedScene" path="res://Scenes/BLK_Pieces/blk_queen_starting_p.tscn" id="7_gh840"]
@@ -14,9 +15,12 @@
 [ext_resource type="PackedScene" path="res://Scenes/BLK_Pieces/blk_king_starting_p.tscn" id="13_mhpax"]
 [ext_resource type="PackedScene" uid="uid://cirpqjk5kre8w" path="res://Scenes/WH_Pieces/wh_king_starting_p.tscn" id="14_4jk4r"]
 [ext_resource type="PackedScene" path="res://Scenes/BLK_Pieces/blk_pawn_starting_p.tscn" id="14_8yitx"]
+[ext_resource type="PackedScene" uid="uid://dvg2hx61q1tn4" path="res://camera_transition.tscn" id="16_2yx7c"]
 
 [node name="Pieces + Board" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 3.5)
+
+[node name="Control" parent="." instance=ExtResource("1_jm8bm")]
 
 [node name="Chess Board" type="Node3D" parent="."]
 
@@ -330,14 +334,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.4, -1)
 [node name="BLK_Pawn_h2" parent="Pieces/Black Pieces" instance=ExtResource("14_8yitx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.4, -1)
 
-[node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 7.41488, -5)
-
-[node name="Camera3D" type="Camera3D" parent="Marker3D"]
-transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0.18487, -1.51653, -1.5847)
-current = true
-fov = 78.2
-near = 0.045
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Marker3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29075, -1.50061, -1.2204)
+[node name="Marker3D" parent="." instance=ExtResource("16_2yx7c")]
