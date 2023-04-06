@@ -1,17 +1,7 @@
 extends Node3D
 
-const WHITE_PAWN = "WP"
-const WHITE_ROOK = "WR"
-const WHITE_KNIGHT = "WH"
-const WHITE_BISHOP = "WB"
-const WHITE_QUEEN = "WQ"
-const WHITE_KING = "WK"
-const BLACK_PAWN = "BP"
-const BLACK_ROOK = "BR"
-const BLACK_KNIGHT = "BH"
-const BLACK_BISHOP = "BB"
-const BLACK_QUEEN = "BQ"
-const BLACK_KING = "BK"
+
+
 
 enum Player {
 	WHITE,
@@ -19,12 +9,18 @@ enum Player {
 }
 
 enum Piece {
-	PAWN,
-	ROOK,
-	KNIGHT,
-	BISHOP,
-	QUEEN,
-	KING
+	WHITE_PAWN,
+	BLACK_PAWN,
+	WHITE_ROOK,
+	BLACK_ROOK,
+	WHITE_KNIGHT,
+	BLACK_KNIGHT,
+	WHITE_BISHOP,
+	BLACK_BISHOP,
+	WHITE_QUEEN,
+	BLACK_QUEEN,
+	WHITE_KING,
+	BLACK_KING
 }
 
 enum Sigil {
@@ -43,28 +39,34 @@ var board_position = ""
 
 # Pieces
 var pieces = {
-	WHITE_PAWN: preload("res://Scenes/WH_Pieces/wh_pawn_starting_p.tscn"),
-	WHITE_ROOK: preload("res://Scenes/WH_Pieces/wh_rook_starting_p.tscn"),
-	WHITE_KNIGHT: preload("res://Scenes/WH_Pieces/wh_knight_starting_p.tscn"),
-	WHITE_BISHOP: preload("res://Scenes/WH_Pieces/wh_bishop_starting_p.tscn"),
-	WHITE_QUEEN: preload("res://Scenes/WH_Pieces/wh_queen_starting_p.tscn"),
-	WHITE_KING: preload("res://Scenes/WH_Pieces/wh_king_starting_p.tscn"),
-	BLACK_PAWN: preload("res://Scenes/BLK_Pieces/blk_pawn_starting_p.tscn"),
-	BLACK_ROOK: preload("res://Scenes/BLK_Pieces/blk_rook_starting_p.tscn"),
-	BLACK_KNIGHT: preload("res://Scenes/BLK_Pieces/blk_knight_starting_p.tscn"),
-	BLACK_BISHOP: preload("res://Scenes/BLK_Pieces/blk_bishop_starting_p.tscn"),
-	BLACK_QUEEN: preload("res://Scenes/BLK_Pieces/blk_queen_starting_p.tscn"),
-	BLACK_KING: preload("res://Scenes/BLK_Pieces/blk_king_starting_p.tscn"),
+	Piece.WHITE_PAWN: preload("res://Scenes/WH_Pieces/wh_pawn_starting_p.tscn"),
+	Piece.BLACK_PAWN: preload("res://Scenes/BLK_Pieces/blk_pawn_starting_p.tscn"),
+	Piece.WHITE_ROOK: preload("res://Scenes/WH_Pieces/wh_rook_starting_p.tscn"),
+	Piece.BLACK_ROOK: preload("res://Scenes/BLK_Pieces/blk_rook_starting_p.tscn"),
+	Piece.WHITE_KNIGHT: preload("res://Scenes/WH_Pieces/wh_knight_starting_p.tscn"),
+	Piece.BLACK_KNIGHT: preload("res://Scenes/BLK_Pieces/blk_knight_starting_p.tscn"),
+	Piece.WHITE_BISHOP: preload("res://Scenes/WH_Pieces/wh_bishop_starting_p.tscn"),
+	Piece.BLACK_BISHOP: preload("res://Scenes/BLK_Pieces/blk_bishop_starting_p.tscn"),
+	Piece.WHITE_QUEEN: preload("res://Scenes/WH_Pieces/wh_queen_starting_p.tscn"),
+	Piece.BLACK_QUEEN: preload("res://Scenes/BLK_Pieces/blk_queen_starting_p.tscn"),
+	Piece.WHITE_KING: preload("res://Scenes/WH_Pieces/wh_king_starting_p.tscn"),
+	Piece.BLACK_KING: preload("res://Scenes/BLK_Pieces/blk_king_starting_p.tscn"),
 }
 
 
 var piece_movement = {
-	Piece.PAWN: load("res://Scripts/pawn_movement.gd").new(),
-	Piece.ROOK: load("res://Scripts/rook_movement.gd").new(),
-	Piece.KNIGHT: load("res://Scripts/knight_movement.gd").new(),
-	Piece.BISHOP: load("res://Scripts/bishop_movement.gd").new(),
-	Piece.QUEEN: load("res://Scripts/queen_movement.gd").new(),
-	Piece.KING: load("res://Scripts/king_movement.gd").new()
+	Piece.WHITE_PAWN: load("res://Scripts/pawn_movement.gd").new(),
+	Piece.BLACK_PAWN: load("res://Scripts/pawn_movement.gd").new(),
+	Piece.WHITE_ROOK: load("res://Scripts/rook_movement.gd").new(),
+	Piece.BLACK_ROOK: load("res://Scripts/rook_movement.gd").new(),
+	Piece.WHITE_KNIGHT: load("res://Scripts/knight_movement.gd").new(),
+	Piece.BLACK_KNIGHT: load("res://Scripts/knight_movement.gd").new(),
+	Piece.WHITE_BISHOP: load("res://Scripts/bishop_movement.gd").new(),
+	Piece.BLACK_BISHOP: load("res://Scripts/bishop_movement.gd").new(),
+	Piece.WHITE_QUEEN: load("res://Scripts/queen_movement.gd").new(),
+	Piece.BLACK_QUEEN: load("res://Scripts/queen_movement.gd").new(),
+	Piece.WHITE_KING: load("res://Scripts/king_movement.gd").new(),
+	Piece.BLACK_KING: load("res://Scripts/king_movement.gd").new()
 }
 
 func string_to_vector3(position_str):
